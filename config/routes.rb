@@ -1,4 +1,7 @@
 Shopelegance::Application.routes.draw do
+  resources :produtos
+
+
   resources :clientes
 
 

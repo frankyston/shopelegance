@@ -1,7 +1,7 @@
 <%= form_for(@cliente) do |f| %>
   <% if @cliente.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
+      <h2><%= pluralize(@cliente.errors.count, "erro") %></h2>
 
       <ul>
       <% @cliente.errors.full_messages.each do |msg| %>
@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :data %><br />
-    <%= f.date_select :data %>
+    <%= f.date_select :data, :start_year => 1930, :end_year => 2013 %>
   </div>
   <div class="actions">
     <%= f.submit %>
