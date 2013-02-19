@@ -1,1 +1,12 @@
 <h1>Produtos</h1>
+
+	<ul>
+		<%= @produtos.each do |produto| %>
+		 <li>
+		 	<article class="listar">
+			 	<h2> Produto: <%= produto.nome%> </h2>
+			 	<h3> Categoria: <%= produto.categoria%> </h3>
+		 	</article>
+		 </li>
+		<%end%>
+	</ul>

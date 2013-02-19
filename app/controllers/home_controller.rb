@@ -11,4 +11,5 @@ class HomeController < ApplicationController
   def produtos
   	@produtos = Produto.all
   end
+
 end
