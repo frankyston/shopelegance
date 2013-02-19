@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
-  
+  layout "site"
+
+  def index
+  end
+
   def clientes
   	@clientes = Cliente.all
   end

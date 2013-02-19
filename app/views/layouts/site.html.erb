@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+   <head>
+   	<title> Minha Aplicação em Rails </title>
+   	<%= stylesheet_link_tag "style", :media => "all" %>
+   </head>
+<body>
+
+	<header>
+		<%= image_tag("technics.jpg", :alt => "Shop Elegance") %>
+	</header>
+	<nav>
+		<ul>
+			<li><%=link_to "Inicio", 
+							{ :controller => "home", :action => "index" }%></li>
+			<li><%=link_to "Clientes", 
+							{ :controller => "home", :action => "clientes" }%></li>
+			<li><%=link_to "Produtos", 
+							{ :controller => "home", :action => "produtos" }%></li>
+		</ul>
+		<div class="clear"></div>
+	</nav>
+	<section>
+		<%=yield%>
+	</section>
+	<footer>
+		<section>
+			Todos os direitos reservados | Feito por <a href="http://www.franat.com.br">Frankyston Lins Nogueira</a>			
+		</section>
+	</footer>
+
+</body>
+</html>
