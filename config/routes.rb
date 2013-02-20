@@ -1,4 +1,7 @@
 Shopelegance::Application.routes.draw do
+  resources :galeria
+
+
   devise_for :usuarios
 
   get "home/index"
