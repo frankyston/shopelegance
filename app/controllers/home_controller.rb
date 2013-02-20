@@ -12,4 +12,8 @@ class HomeController < ApplicationController
   	@produtos = Produto.all
   end
 
+  def galerias
+  	@galeria = Galerium.all
+  end
+
 end

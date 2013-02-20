@@ -8,6 +8,7 @@ Shopelegance::Application.routes.draw do
   get "home/clientes"
 
   get "home/produtos"
+  get "home/galerias"
 
   resources :produtos
 

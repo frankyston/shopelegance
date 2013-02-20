@@ -1,4 +1,4 @@
-<%= form_for(@galerium) do |f| %>
+<%= form_for(@galerium, :html => { :multipart => true }) do |f| %>
   <% if @galerium.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@galerium.errors.count, "erro") %> </h2>
@@ -18,6 +18,10 @@
   <div class="field">
     <%= f.label :data %><br />
     <%= f.date_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar %>
   </div>
   <div class="actions">
     <%= f.submit %>

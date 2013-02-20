@@ -1,0 +1,12 @@
+<h1>Galeria</h1>
+
+	<ul>
+		<% @galeria.each do |galeria| %>
+		 <li>
+		 	<article class="galeria">
+			 	<h2> <%= galeria.nome%> </h2>
+			 	<p> <%= image_tag galeria.avatar.url(:medium) %> </p>
+		 	</article>
+		 </li>
+		<%end%>
+	</ul>
