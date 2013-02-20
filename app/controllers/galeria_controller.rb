@@ -1,4 +1,5 @@
 class GaleriaController < ApplicationController
+  before_filter :authenticate_usuario!
   # GET /galeria
   # GET /galeria.json
   def index
@@ -44,7 +45,7 @@ class GaleriaController < ApplicationController
 
     respond_to do |format|
       if @galerium.save
-        format.html { redirect_to @galerium, notice: 'Galerium was successfully created.' }
+        format.html { redirect_to @galerium, notice: 'Galeria criada com Sucesso.' }
         format.json { render json: @galerium, status: :created, location: @galerium }
       else
         format.html { render action: "new" }
@@ -60,7 +61,7 @@ class GaleriaController < ApplicationController
 
     respond_to do |format|
       if @galerium.update_attributes(params[:galerium])
-        format.html { redirect_to @galerium, notice: 'Galerium was successfully updated.' }
+        format.html { redirect_to @galerium, notice: 'Galeria atualizada com Sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

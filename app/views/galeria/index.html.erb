@@ -1,4 +1,4 @@
-<h1>Listing galeria</h1>
+<h1>Lista de galeria</h1>
 
 <table>
   <tr>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= galerium.nome %></td>
     <td><%= galerium.data %></td>
-    <td><%= link_to 'Show', galerium %></td>
-    <td><%= link_to 'Edit', edit_galerium_path(galerium) %></td>
-    <td><%= link_to 'Destroy', galerium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Mostrar', galerium %></td>
+    <td><%= link_to 'Editar', edit_galerium_path(galerium) %></td>
+    <td><%= link_to 'Excluir', galerium, method: :delete, data: { confirm: 'Deseja Realmente Excluir?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Galerium', new_galerium_path %>
+<%= link_to 'Nova Galeria', new_galerium_path %>
